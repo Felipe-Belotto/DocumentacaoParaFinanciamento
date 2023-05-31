@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Calculadora - Processo de edição</title>
+</head>
+
+<body>
+    <!-- Inicio da calculadora -->
+    <main>
+        <div class="caixa_calculadora" id="calculadora">
+            <h1 class="titulo_pagina">Calculadora de documentação</h1>
+
+            <div class="preencher_conteudo">
+                <div id="conteudo_tela">
+                    <div class="preencher_layout">
+
+                        <div class="layout_preencher caixa_preencher">
+                            <label class="legenda-caixa" id="legenda-compra">Compra</label>
+                            <input type="number" name="compra" id="compra" class="input-preencher" autocomplete="off" placeholder="Digite o valor de compra">
+                            <label class="legenda-caixa" id="legenda-financiamento">Financiamento</label>
+                            <input type="number" name="financiamento" id="financiamento" class="input-preencher" autocomplete="off" placeholder="Digite o valor de financiamento">
+
+                            <label class="legenda-caixa" id="legenda-cidade">Cidade</label>
+                            <select id="cidade" class="input-preencher" required>
+                                <option value="nenhum" disabled selected>Selecione a cidade</option>
+                                <option value="campinas">Campinas</option>
+                                <option value="guarulhos">Guarulhos</option>
+                            </select>
+
+                            <label class="legenda-caixa" id="legenda-banco">Banco</label>
+                            <select id="banco" class="input-preencher" required>
+                                <option value="nenhum" disabled selected>Selecione o banco</option>
+                                <option value="caixa" id="caixa">Caixa</option>
+                                <option value="bb" id="bb">Banco do Brasil</option>
+                                <option value="itau" id="itau">Itau</option>
+                            </select>
+
+                            <label class="legenda-caixa" id="legenda-agencia">Agência</label>
+                            <select id="agencia" class="input-preencher">
+                                <option value="nenhum">Selecione a agência</option>
+                                <option value="0296" id="0296">0296 - Campinas</option>
+                                <option value="0676" id="0676">0676 - Conceição</option>
+                                <option value="3231" id="3231">3231 - Bom Sucesso</option>
+                            </select>
+
+                            <label class="legenda-caixa" id="legenda-enquadramento">Enquadramento</label>
+                            <select id="enquadramento" class="input-preencher">
+                                <option value="nenhum" disabled selected>Selecione o enquadramento</option>
+                                <option value="mcmv">MCMV</option>
+                                <option value="proCotista">Pró cotista</option>
+                                <option value="sbpe">SBPE</option>
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layout_resposta">
+                <section id="resposta" class="caixa_resposta"></section>
+            </div>
+        </div>
+
+        <section class="caixa_botao">
+            <button type="button" class="botao display-none" value="copiar" id="botaoCopiar">Copiar</button>
+        </section>
+    </main>
+
+    <script src="assets/scripts/main.js"></script>
+    <!-- Final da calculadora -->
+</body>
+
+</html>
