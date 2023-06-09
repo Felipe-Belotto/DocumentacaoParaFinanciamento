@@ -148,6 +148,10 @@ header .container {
     padding: 0;
   }
 
+  header .container {
+    display: none;
+  }
+
   .caixa_calculadora {
     padding: 5px 0 5px 0;
   }
