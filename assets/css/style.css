@@ -58,6 +58,10 @@ header .container {
   text-decoration: none;
 }
 
+.cabecalho-item:hover {
+  text-decoration: underline;
+}
+
 .titulo_pagina {
   font-size: 2rem;
   padding: 10px 80px;
