@@ -1,4 +1,5 @@
 :root {
+  --cor-ativa: #ffffffd6;
   --cor-fundo: #151515;
   --cor-letras: #ffffff;
   --cor-botao: var(--cor-letras);
@@ -9,6 +10,18 @@
   --fundo-botao: rgba(0, 0, 0, 0.273);
   --fundo-legenda: rgb(6, 5, 5);
   --fundo-resposta: rgba(0, 0, 0, 0.273);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blinking {
+  50% {
+    border-color: transparent;
+  }
 }
 
 * {
@@ -23,8 +36,6 @@ body {
   line-height: 1.2;
   margin: 0;
 }
-
-/* Estilos para telas maiores que 768px */
 
 main {
   max-width: 800px;
@@ -47,9 +58,17 @@ header .container {
   border-bottom: 1px solid gray;
 }
 
+.cabecalho-titulo {
+  width: 21ch;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 1s steps(10), blinking 0.5s infinite step-end alternate;
+}
+
 .cabecalho-lista {
   display: flex;
   gap: 1em;
+  width: 40ch;
 }
 
 .cabecalho-item:last-child {
@@ -60,6 +79,9 @@ header .container {
 
 .cabecalho-item:hover {
   text-decoration: underline;
+}
+.cabecalho-item:active {
+  color: var(--cor-ativa);
 }
 
 .titulo_pagina {
