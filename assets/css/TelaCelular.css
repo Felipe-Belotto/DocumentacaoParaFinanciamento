@@ -1,0 +1,84 @@
+/* Estilos para telas menores que 768px */
+@media (max-width: 768px) {
+  main {
+    padding: 0;
+  }
+
+  header .container {
+    display: none;
+  }
+
+  footer .container {
+    display: none;
+  }
+
+  .calculadora_container {
+    width: 100%;
+  }
+
+  .caixa_calculadora {
+    padding: 0;
+  }
+
+  .titulo_pagina {
+    font-size: 1.2rem;
+    margin: 0 0 0.2em 0;
+    padding: 1rem 0;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 0;
+    border: none;
+  }
+
+  .caixa_preencher {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .legenda-caixa {
+    padding: 0.2em 0 0.2em 10px;
+    font-size: 1.2rem;
+    border-radius: 0;
+  }
+
+  .input-preencher {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 0;
+  }
+
+  .caixa_resposta {
+    width: 100%;
+    min-height: 0;
+    padding: 1rem 1rem;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+  }
+
+  .caixa_botao {
+    width: 99.6%;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .botao {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5 0 0 0;
+    margin: 0;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+  }
+
+  .display-none {
+    display: none;
+  }
+}
