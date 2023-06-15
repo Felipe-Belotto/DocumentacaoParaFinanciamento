@@ -1,15 +1,20 @@
 :root {
+  --borda-all: #3c3c47fa;
+  --branco: #fff;
+
   --cor-ativa: #ffffffd6;
-  --cor-fundo: #151515;
-  --cor-letras: #ffffff;
-  --cor-botao: var(--cor-letras);
-  --cor-legenda: white;
-  --cor-resposta: white;
-  --fundo-input: rgba(92, 92, 92, 0.129);
-  --fundo-titulo: rgb(0, 0, 0);
-  --fundo-botao: rgba(0, 0, 0, 0.273);
-  --fundo-legenda: rgb(6, 5, 5);
-  --fundo-resposta: rgba(0, 0, 0, 0.273);
+  --cor-fundo: #ffffff;
+  --cor-titulo: #ffffff;
+  --cor-letras: #000;
+  --cor-botao: #ffffff;
+  --cor-legenda: var(--branco);
+  --cor-resposta: rgb(0, 0, 0);
+
+  --fundo-input: var(--branco);
+  --fundo-titulo: #004e8e;
+  --fundo-botao: #004e8e;
+  --fundo-legenda: #004e8e;
+  --fundo-resposta: var(--cor-ativa);
 }
 
 @keyframes typing {
@@ -26,25 +31,29 @@
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   background: var(--cor-fundo);
   color: var(--cor-letras);
   font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.2;
+  font-size: 1em;
+  line-height: 1;
   margin: 0;
 }
 
 main {
   max-width: 800px;
   margin: 0 auto;
-  padding: 100px 0 0 0;
+  padding: 50px 0 0 0;
 }
 
 .caixa_calculadora {
-  padding: 0px;
+  padding: 5em;
+  background-color: #f0f0f0;
+  border: 1px var(--borda-all) inset;
+  border-radius: 3px;
 }
 
 header .container {
@@ -52,10 +61,10 @@ header .container {
   justify-content: space-between;
   align-items: center;
   padding: 1em;
-  font-size: 24px;
+  font-size: 1.5em;
   font-family: Lucida Bright, Georgia, serif;
   background-color: #000;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px var(--borda-all) inset;
 }
 
 .cabecalho-titulo {
@@ -86,11 +95,13 @@ header .container {
 
 .titulo_pagina {
   font-size: 2rem;
-  padding: 10px 80px;
+  padding: 10px 40px;
   text-align: center;
+  color: var(--cor-titulo);
   background-color: var(--fundo-titulo);
-  margin: 0 0 1em 0;
-  border-radius: 5px;
+  margin: 0 0 0.5em 0;
+  border-radius: 3px;
+  border: 1px var(--borda-all) inset;
 }
 
 .caixa_preencher {
@@ -107,6 +118,8 @@ header .container {
   font-size: 1.2rem;
   display: flex;
   align-items: center;
+  border: 1px var(--borda-all) inset;
+  border-radius: 3px;
 }
 
 .input-preencher {
@@ -114,11 +127,12 @@ header .container {
   padding: 10px;
   background-color: var(--fundo-input);
   color: var(--cor-letras);
-  border-radius: 5px;
-  border: none;
+  border-radius: 3px;
+  border: 1px var(--borda-all) inset;
   outline: none;
   appearance: none;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .input-preencher:focus {
@@ -140,17 +154,20 @@ header .container {
   justify-content: center;
   margin: 10px 0 10px 0;
   padding: 2em 0;
+  color: var(--cor-resposta);
   min-height: 200px;
   border-radius: 5px;
   background-color: var(--fundo-resposta);
-  color: var(--cor-resposta);
+  border: 1px var(--borda-all) inset;
   font-size: 1.4rem;
+  line-height: 1.5;
 }
 
 .caixa_botao {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px;
 }
 
 .botao {
@@ -179,13 +196,17 @@ header .container {
   }
 
   .caixa_calculadora {
-    padding: 5px 0 5px 0;
+    padding: 0;
   }
 
   .titulo_pagina {
-    font-size: 1.5rem;
-    margin: 0 0 1rem 0;
+    font-size: 1.7rem;
+    margin: 0 0 0.2em 0;
+    padding: 1rem 0;
     text-align: center;
+    font-weight: bold;
+    border-radius: 0;
+    border: none;
   }
 
   .caixa_preencher {
@@ -195,14 +216,15 @@ header .container {
   }
 
   .legenda-caixa {
-    padding: 0 0 0 10px;
-    font-size: 1rem;
+    padding: 0.2em 0 0.2em 10px;
+    font-size: 1.5rem;
+    border-radius: 0;
   }
 
   .input-preencher {
     font-size: 1rem;
     padding: 10px;
-    margin-bottom: 5 px;
+    border-radius: 0;
   }
 
   .caixa_resposta {
@@ -213,20 +235,26 @@ header .container {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 0;
   }
 
   .caixa_botao {
-    width: 100%;
+    width: 99.6%;
     display: flex;
     position: absolute;
     bottom: 0;
+    margin: 0;
+    padding: 0;
   }
 
   .botao {
-    font-size: 1.1rem;
-    padding: 10px 20px;
-    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5 0 0 0;
+    margin: 0;
     width: 100%;
+    border: none;
+    border-radius: 3px;
   }
 
   .display-none {
