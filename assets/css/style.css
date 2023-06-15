@@ -75,8 +75,24 @@ header .container {
 
 .cabecalho-lista {
   display: flex;
+  align-items: center;
   gap: 0.5em;
   color: var(--cor-cabecalho);
+}
+
+.cabecalho-item button {
+  background: none;
+  font-size: 1em;
+  font-family: Lucida Bright, Georgia, serif;
+  color: var(--cor-botao);
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0;
+}
+
+.cabecalho-item button:hover {
+  text-decoration: underline;
 }
 
 .cabecalho-item:last-child {
