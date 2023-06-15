@@ -220,7 +220,7 @@ footer .container a {
 }
 
 /* Estilos para telas menores que 768px */
-@media (max-width: 767px) {
+@media (max-width: 650px) {
   main {
     padding: 0;
   }
@@ -300,6 +300,33 @@ footer .container a {
   }
 
   .display-none {
+    display: none;
+  }
+}
+
+@media print {
+  body {
+    transform: scale(1.1);
+  }
+
+  header {
+    display: none;
+  }
+
+  footer {
+    display: none;
+  }
+
+  .calculadora_container {
+    width: 80%;
+  }
+
+  .caixa_calculadora {
+    padding: 200px 0 0 0;
+    border: none;
+  }
+
+  .caixa_botao {
     display: none;
   }
 }
