@@ -321,8 +321,14 @@ footer .container a {
 }
 
 @media print {
+  :root {
+    --cor-titulo: rgb(43, 43, 43);
+    --cor-legenda: var(--cor-titulo);
+    --cor-letras: #00000083;
+  }
+
   body {
-    transform: scale(1.1);
+    transform: scale(1);
   }
 
   header {
@@ -334,11 +340,11 @@ footer .container a {
   }
 
   .calculadora_container {
-    width: 80%;
+    width: 50%;
   }
 
   .caixa_calculadora {
-    padding: 200px 0 0 0;
+    padding: 100px 0 0 0;
     border: none;
   }
 
