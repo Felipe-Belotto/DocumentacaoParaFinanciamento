@@ -1,9 +1,9 @@
 :root {
   --borda-all: #3c3c47fa;
-  --branco: #fff;
+  --branco: ghostwhite;
 
   --cor-ativa: #ffffffd6;
-  --cor-fundo: #ffffff;
+  --cor-fundo: var(--branco);
   --cor-titulo: #ffffff;
   --cor-letras: #000;
   --cor-cabecalho: #ffffff;
@@ -11,12 +11,12 @@
   --cor-legenda: var(--branco);
   --cor-resposta: rgb(0, 0, 0);
 
-  --fundo-header-footer: black;
+  --fundo-header-footer: #004e8e;
   --fundo-input: var(--branco);
   --fundo-titulo: #004e8e;
   --fundo-botao: #004e8e;
   --fundo-legenda: #004e8e;
-  --fundo-resposta: var(--cor-ativa);
+  --fundo-resposta: var(--branco);
 }
 
 @keyframes typing {
@@ -46,6 +46,8 @@ body {
 }
 
 main {
+  display: flex;
+  justify-content: center;
   max-width: 800px;
   margin: 0 auto;
   padding: 50px 0 0 0;
@@ -55,11 +57,39 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5em;
-  font-size: 1.5em;
+  padding: 0.5em 0;
+  font-size: 1.4em;
   font-family: Lucida Bright, Georgia, serif;
   background-color: var(--fundo-header-footer);
   border-bottom: 1px var(--borda-all) inset;
+}
+
+.cabecalho-titulo {
+  padding: 0 0 0 0.5em;
+  width: 21ch;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 1s steps(10), blinking 0.5s infinite step-end alternate;
+  color: var(--cor-cabecalho);
+}
+
+.cabecalho-lista {
+  display: flex;
+  gap: 0.5em;
+  color: var(--cor-cabecalho);
+}
+
+.cabecalho-item:last-child {
+  margin: 0 3em 0 0;
+  outline: none;
+  text-decoration: none;
+}
+
+.cabecalho-item:hover {
+  text-decoration: underline;
+}
+.cabecalho-item:active {
+  color: var(--cor-ativa);
 }
 
 footer .container {
@@ -76,47 +106,25 @@ footer .container {
 }
 
 footer .container a {
-  padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(37, 37, 37);
+  padding: 5px;
+  text-align: center;
+  color: black;
+  background-color: ghostwhite;
   border-radius: 3px;
+}
+
+.calculadora_container {
+  width: 80%;
 }
 
 .caixa_calculadora {
-  padding: 5em;
+  padding: 1em;
   background-color: #f0f0f0;
   border: 1px var(--borda-all) inset;
   border-radius: 3px;
-}
-
-.cabecalho-titulo {
-  width: 21ch;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 1s steps(10), blinking 0.5s infinite step-end alternate;
-  color: var(--cor-cabecalho);
-}
-
-.cabecalho-lista {
-  display: flex;
-  gap: 1em;
-  width: 40ch;
-  color: var(--cor-cabecalho);
-}
-
-.cabecalho-item:last-child {
-  margin: 0 3em 0 0;
-  outline: none;
-  text-decoration: none;
-}
-
-.cabecalho-item:hover {
-  text-decoration: underline;
-}
-.cabecalho-item:active {
-  color: var(--cor-ativa);
 }
 
 .titulo_pagina {
@@ -186,7 +194,7 @@ footer .container a {
   background-color: var(--fundo-resposta);
   border: 1px var(--borda-all) inset;
   font-size: 1.4rem;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .caixa_botao {
@@ -225,12 +233,16 @@ footer .container a {
     display: none;
   }
 
+  .calculadora_container {
+    width: 100%;
+  }
+
   .caixa_calculadora {
     padding: 0;
   }
 
   .titulo_pagina {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     margin: 0 0 0.2em 0;
     padding: 1rem 0;
     text-align: center;
@@ -247,7 +259,7 @@ footer .container a {
 
   .legenda-caixa {
     padding: 0.2em 0 0.2em 10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border-radius: 0;
   }
 
