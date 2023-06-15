@@ -6,10 +6,12 @@
   --cor-fundo: #ffffff;
   --cor-titulo: #ffffff;
   --cor-letras: #000;
+  --cor-cabecalho: #ffffff;
   --cor-botao: #ffffff;
   --cor-legenda: var(--branco);
   --cor-resposta: rgb(0, 0, 0);
 
+  --fundo-header-footer: black;
   --fundo-input: var(--branco);
   --fundo-titulo: #004e8e;
   --fundo-botao: #004e8e;
@@ -49,6 +51,39 @@ main {
   padding: 50px 0 0 0;
 }
 
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+  font-size: 1.5em;
+  font-family: Lucida Bright, Georgia, serif;
+  background-color: var(--fundo-header-footer);
+  border-bottom: 1px var(--borda-all) inset;
+}
+
+footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5em;
+  color: var(--cor-titulo);
+  position: absolute;
+  bottom: 0;
+  background-color: var(--fundo-header-footer);
+  gap: 5px;
+}
+
+footer .container a {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(37, 37, 37);
+  border-radius: 3px;
+}
+
 .caixa_calculadora {
   padding: 5em;
   background-color: #f0f0f0;
@@ -56,28 +91,19 @@ main {
   border-radius: 3px;
 }
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em;
-  font-size: 1.5em;
-  font-family: Lucida Bright, Georgia, serif;
-  background-color: #000;
-  border-bottom: 1px var(--borda-all) inset;
-}
-
 .cabecalho-titulo {
   width: 21ch;
   white-space: nowrap;
   overflow: hidden;
   animation: typing 1s steps(10), blinking 0.5s infinite step-end alternate;
+  color: var(--cor-cabecalho);
 }
 
 .cabecalho-lista {
   display: flex;
   gap: 1em;
   width: 40ch;
+  color: var(--cor-cabecalho);
 }
 
 .cabecalho-item:last-child {
@@ -192,6 +218,10 @@ header .container {
   }
 
   header .container {
+    display: none;
+  }
+
+  footer .container {
     display: none;
   }
 
