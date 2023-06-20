@@ -116,7 +116,6 @@ footer .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   padding: 0.5em;
   color: var(--cor-titulo);
   background-color: var(--fundo-header-footer);
