@@ -1,6 +1,7 @@
 /* Estilos para telas menores que 768px */
 @media (max-width: 768px) {
   main {
+    display: inline;
     padding: 0;
   }
 
@@ -22,8 +23,7 @@
 
   .titulo_pagina {
     font-size: 1.2rem;
-    margin: 0 0 0.2em 0;
-    padding: 1rem 0;
+    margin: 0 0 2px 0;
     text-align: center;
     font-weight: bold;
     border-radius: 0;
@@ -73,9 +73,12 @@
     font-weight: 500;
     padding: 0.5 0 0 0;
     margin: 0;
-    width: 100%;
+    width: 80%;
     border: none;
     border-radius: 3px;
+  }
+  .botao:active {
+    transform: scale(0.99);
   }
 
   .display-none {
