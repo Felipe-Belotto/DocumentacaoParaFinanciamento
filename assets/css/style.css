@@ -53,12 +53,11 @@ main {
   justify-content: center;
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 0;
-  height: 90.5vh;
+  padding: 2em 0 0 0;
 }
 
 header .container {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   padding: 0.5em 0;
@@ -66,7 +65,6 @@ header .container {
   font-family: Lucida Bright, Georgia, serif;
   background-color: var(--fundo-header-footer);
   border-bottom: 1px var(--borda-all) inset;
-  height: 2.5vh;
 }
 
 .cabecalho-titulo {
@@ -114,14 +112,13 @@ header .container {
 }
 
 footer .container {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   padding: 0.5em;
   color: var(--cor-titulo);
   background-color: var(--fundo-header-footer);
   gap: 5px;
-  height: 2.5vh;
 }
 
 footer .container a {
