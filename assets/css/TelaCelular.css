@@ -3,6 +3,7 @@
   main {
     display: inline;
     padding: 0;
+    width: 100%;
   }
 
   header .container {
@@ -49,7 +50,6 @@
   }
 
   .caixa_resposta {
-    width: 100%;
     min-height: 0;
     padding: 1rem 1rem;
     font-size: 1.2rem;
