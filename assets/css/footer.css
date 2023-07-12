@@ -1,0 +1,30 @@
+:root{
+  --footer-background: #00000000;
+  --footer-color:  ghostwhite;
+
+  --footer-linkedin-hover: rgba(240, 178, 6, 0.979);
+}
+
+footer{
+  background-color: var(--footer-background);
+}
+
+footer .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  color: var(--footer-color);
+  gap: 8px;
+}
+
+footer .footer__linkedin {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+footer .footer__linkedin:hover{
+ color: var(--footer-linkedin-hover);
+}

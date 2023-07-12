@@ -1,0 +1,45 @@
+:root{
+  --header-background: #00000000;
+  --header-title: white ;
+  --header-color: white;
+  --header-item-hover:  rgba(240, 178, 6, 0.979) ;
+}
+
+header {
+  width: 100%;
+  background-color: var(--header-background);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+  padding: 0 1em ;
+  font-size: 1.2em;
+}
+
+header .header__title{
+  color: var(--header-title);
+}
+
+header .header__list {
+  display: flex;
+  gap: 1em;
+}
+
+header .header__item {
+  color: var(--header-color);
+}
+
+header .header__item:hover {
+  color: var(--header-item-hover);
+}
+
+@media screen and (max-width: 768px) {
+
+  header{
+    display: none;
+  }
+  
+}

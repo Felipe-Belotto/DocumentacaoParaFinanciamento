@@ -1,9 +1,6 @@
 const informativa = document.querySelectorAll(".legendas-input");
 const inputs = document.querySelectorAll(".input-preencher");
 
-/* let desaparecerLinha = (lista, lista2, indice) => { lista[indice].style.display = "none"; lista2[indice].style.display = "none"; }
-let aparecerLinha = (lista, lista2, indice) => { lista[indice].style.display = "flex"; lista2[indice].style.display = "flex"; } */
-
 class Documentacao {
   constructor() {
     this.legenda = [];
@@ -19,13 +16,11 @@ class Documentacao {
   lerDados() {
     this.input.compra = document.getElementById("compra");
     this.legenda.compra = document.getElementById("legenda-compra");
-    this.valor.compra = document.getElementById("compra").valueAsNumber;
+
+    this.valor.compra = document.getElementById("compra").value;
     this.input.financiamento = document.getElementById("financiamento");
-    this.legenda.financiamento = document.getElementById(
-      "legenda-financiamento"
-    );
-    this.valor.financiamento =
-      document.getElementById("financiamento").valueAsNumber;
+    this.legenda.financiamento = document.getElementById("legenda-financiamento");
+    this.valor.financiamento = document.getElementById("financiamento").value
     this.valor.recursosProprios = this.valor.compra - this.valor.financiamento;
     this.input.cidade = document.getElementById("cidade");
     this.legenda.cidade = document.getElementById("legenda-cidade");
@@ -37,9 +32,7 @@ class Documentacao {
     this.legenda.agencia = document.getElementById("legenda-agencia");
     this.valor.agencia = document.querySelector("#agencia").value;
     this.input.enquadramento = document.getElementById("enquadramento");
-    this.legenda.enquadramento = document.getElementById(
-      "legenda-enquadramento"
-    );
+    this.legenda.enquadramento = document.getElementById("legenda-enquadramento");
     this.valor.enquadramento = document.querySelector("#enquadramento").value;
 
     this.verificaCidade();
@@ -59,7 +52,7 @@ class Documentacao {
 
     switch (this.valor.cidade) {
       case "campinas":
-        this.cidadeValores.limiteFGTS = 264000;
+        this.cidadeValores.limiteFGTS = 350000;
         this.cidadeValores.itbi = this.valor.compra * 0.027;
 
         optionBB.classList.remove("display-none");
@@ -201,8 +194,7 @@ class Documentacao {
 
   verificaExecucoes() {
     this.documentacaoValores.taxa = this.enquadramentoValores.taxa;
-    this.documentacaoValores.relacionamento =
-      this.agenciaValores.relacionamento;
+    this.documentacaoValores.relacionamento = this.agenciaValores.relacionamento;
     this.documentacaoValores.itbi = this.cidadeValores.itbi;
     this.documentacaoValores.registro = this.cartorioValores.registro;
 
@@ -210,6 +202,7 @@ class Documentacao {
     let resultado = (valor) => {
       resposta.innerHTML = valor;
     };
+
     let modificaDinheiroReal = (valor) => {
       return valor.toLocaleString("pt-br", {
         style: "currency",
@@ -227,7 +220,6 @@ class Documentacao {
       resposta.classList.add("caixa_reposta");
     }
 
-    botaoCopiar.style.display = "block";
     resposta.style.display = "flex";
 
     if (this.valor.compra < 62000) {
@@ -325,10 +317,7 @@ elementos.forEach((elemento) => {
 
 //Botões
 
-let botaoCopiar = document.getElementById("botaoCopiar");
-botaoCopiar.addEventListener("click", function () {
+resposta.addEventListener("click", function () {
   let valoresDocumentacao = document.getElementById("resposta");
   navigator.clipboard.writeText(valoresDocumentacao.textContent);
-
-  elementos.forEach(elemento);
 });
