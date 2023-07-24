@@ -19,8 +19,10 @@ class Documentacao {
 
     this.valor.compra = document.getElementById("compra").value;
     this.input.financiamento = document.getElementById("financiamento");
-    this.legenda.financiamento = document.getElementById("legenda-financiamento");
-    this.valor.financiamento = document.getElementById("financiamento").value
+    this.legenda.financiamento = document.getElementById(
+      "legenda-financiamento"
+    );
+    this.valor.financiamento = document.getElementById("financiamento").value;
     this.valor.recursosProprios = this.valor.compra - this.valor.financiamento;
     this.input.cidade = document.getElementById("cidade");
     this.legenda.cidade = document.getElementById("legenda-cidade");
@@ -32,7 +34,9 @@ class Documentacao {
     this.legenda.agencia = document.getElementById("legenda-agencia");
     this.valor.agencia = document.querySelector("#agencia").value;
     this.input.enquadramento = document.getElementById("enquadramento");
-    this.legenda.enquadramento = document.getElementById("legenda-enquadramento");
+    this.legenda.enquadramento = document.getElementById(
+      "legenda-enquadramento"
+    );
     this.valor.enquadramento = document.querySelector("#enquadramento").value;
 
     this.verificaCidade();
@@ -63,9 +67,20 @@ class Documentacao {
         break;
 
       case "guarulhos":
-        this.cidadeValores.limiteFGTS = 264000;
-        this.cidadeValores.itbi =
-          0.02 * this.valor.recursosProprios + 0.005 * this.valor.financiamento;
+        this.cidadeValores.limiteFGTS = 350000;
+        let UFG = 4.1502;
+        let limiteUFG = 60000 * UFG;
+        if (this.valor.financiamento <= limiteUFG) {
+          this.cidadeValores.itbi =
+            0.02 * this.valor.recursosProprios +
+            0.005 * this.valor.financiamento;
+        } else {
+          let diferencaFinanciamento = this.valor.financiamento - limiteUFG;
+          this.cidadeValores.itbi =
+            0.02 * this.valor.recursosProprios +
+            0.005 * limiteUFG +
+            0.02 * diferencaFinanciamento;
+        }
 
         optionBB.classList.add("display-none");
         option0296.classList.add("display-none");
@@ -194,7 +209,8 @@ class Documentacao {
 
   verificaExecucoes() {
     this.documentacaoValores.taxa = this.enquadramentoValores.taxa;
-    this.documentacaoValores.relacionamento = this.agenciaValores.relacionamento;
+    this.documentacaoValores.relacionamento =
+      this.agenciaValores.relacionamento;
     this.documentacaoValores.itbi = this.cidadeValores.itbi;
     this.documentacaoValores.registro = this.cartorioValores.registro;
 
