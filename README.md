@@ -1,5 +1,7 @@
 # Calculadora de Financiamento
 
+[Visite o site SW Edits](https://a.imagem.app/ohOKZP.png)
+
 ## Descrição
 
 Este projeto é uma iniciativa para aprimorar habilidades práticas no desenvolvimento front-end e back-end, proporcionando uma experiência de aprendizado valiosa. A calculadora de financiamento é um sistema dedicado ao cálculo da documentação relacionada a financiamentos, incluindo taxas bancárias e impostos associados ao processo.
