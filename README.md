@@ -1,8 +1,14 @@
 # Calculadora de Financiamento
 
-<a href="https://documentacao-para-financiamento.vercel.app/" target="_blank">
-  <img src="https://a.imagem.app/ohOKZP.png" alt="Visite a calculadora">
+<a href="https://documentacao-para-financiamento.vercel.app/" target="_blank" rel="noopener noreferrer">
+  <img src="https://a.imagem.app/ohOKZP.png" alt="Visite a calculadora" />
 </a>
+
+<script>
+  document.querySelectorAll('a[target="_blank"]').forEach(function(el) {
+    el.setAttribute('rel', 'noopener noreferrer');
+  });
+</script>
 
 
 ## Descrição
