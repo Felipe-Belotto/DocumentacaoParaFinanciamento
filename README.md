@@ -1,6 +1,9 @@
 # Calculadora de Financiamento
 
-[![Visite a calculadora](https://a.imagem.app/ohOKZP.png)](https://documentacao-para-financiamento.vercel.app/){:target="_blank"}
+<a href="https://documentacao-para-financiamento.vercel.app/" target="_blank">
+  <img src="https://a.imagem.app/ohOKZP.png" alt="Visite a calculadora">
+</a>
+
 
 ## Descrição
 
