@@ -1,6 +1,7 @@
 # Calculadora de Financiamento
 
 [![Visite a calculadora](https://a.imagem.app/ohOXY3.png)](https://documentacao-para-financiamento.vercel.app/)
+Clique na miniatura para visitar o site
 
 
 
