@@ -23,7 +23,7 @@ main .calculadora__title{
   text-align: center;
   background-color: var(--calculadora-title-background);
   color: var(--calculadora-title-color);
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
   padding: 10px 5em;
   font-size: 1.2em;
 }
